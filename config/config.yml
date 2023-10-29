@@ -1,0 +1,3 @@
+input_file: 'trips.csv'
+database: 'mydb'
+table: 'trips'
