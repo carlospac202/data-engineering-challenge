@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y python3-pip
 
 # Use the updated pip to install additional Python packages
 RUN pip3 install pandas
+RUN pip3 install pyyaml
 
 # Run hello.py when the container launches
-CMD ["python3", "test.py"]
+CMD ["python3", "main.py"]

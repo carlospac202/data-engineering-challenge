@@ -1,0 +1,1 @@
+INSERT INTO trips (region, origin_lat, origin_lon, destination_lat, destination_lon, datetime, datasource) VALUES (?, ?, ?, ?, ?, ?, ?);
