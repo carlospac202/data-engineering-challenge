@@ -25,7 +25,7 @@ class DB:
             self.logger.error(f"Error connecting to SQLITE, Error: {e}")
             raise Exception(f"Error to connect to SQLITE, Error: {e}")
 
-    def _execute_query(self, query: str, parameter=None, is_execute_many: bool = False) -> list:
+    def _execute_query(self, query: str, parameter=None, is_execute_many: bool = False):
         """Cursor process to execute SQL statements)
         Raises:
             Exception: An error has occurred during the SQL execution
@@ -40,12 +40,15 @@ class DB:
                 cursor = conn.cursor()
                 if is_execute_many:
                     cursor.executemany(query, parameter)
+                    result = []
                 else:
                     cursor.execute(query, parameter)
-                    cursor.fetchall()
+                    result = cursor.fetchall()
 
         except Exception as e:
             self.logger.error(f"Execution query Error: {e}")
+        finally:
+            return result
 
     def close_connection(self):
         """
