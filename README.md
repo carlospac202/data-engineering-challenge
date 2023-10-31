@@ -37,8 +37,6 @@ Source Type: CSV
 
 ## Architecture
 
-![test.drawio.png](..%2F..%2F..%2F..%2FDownloads%2Ftest.drawio.png)
-
 ### Components
 
 	*-	SQLITE3 DB: SQLite is a C library that provides a lightweight disk-based database that doesn’t require a separate server process.
@@ -72,11 +70,13 @@ To get started with this project, follow these installation requirements and ste
 - Step 2:
   Go to the project folder
 - Step 3:
-  Give permissions to the shell scripts: chmod +x ./shell.sh
-                                         chmod +x ./shell_airflow.sh
+  Give permissions to the shell scripts: chmod +x shell.sh
+                                         chmod +x shell_airflow.sh
 - Step 4:
   Run the first shell script: ./shell.sh
-  
 
+To complete the project demonstration that is the workflow automation please follow these steps
 
+- Step 1:
+  Run the first shell script: ./shell_airflow.sh
 
